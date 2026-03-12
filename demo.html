@@ -128,8 +128,6 @@ button.main-btn{
 <!-- VIEWER MODE -->
 <div id="viewer">
 
-<div class="top-success">succeed!</div>
-
 <div class="section">
 <div class="section-title">information</div>
 
@@ -202,10 +200,10 @@ function generateLink(){
         return;
     }
 
-   let url = "https://github.com/CompanyRepaymentLink/payment-.git" +
-"?name=" + encodeURIComponent(name) +
-"&upi=" + encodeURIComponent(upi) +
-"&amount=" + encodeURIComponent(amount);
+    let url = window.location.origin + window.location.pathname +
+    "?name=" + encodeURIComponent(name) +
+    "&upi=" + encodeURIComponent(upi) +
+    "&amount=" + encodeURIComponent(amount);
 
     document.getElementById("result").innerHTML =
     "<p style='word-wrap:break-word;font-size:12px;'>" + url + "</p>";
